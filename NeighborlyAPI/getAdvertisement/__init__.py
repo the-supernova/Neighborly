@@ -19,7 +19,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             database = client['neighborlymongodb']
             collection = database['advertisements']
            
-            query = {'_id': ObjectId(id)}
+            query = {'_id': str(id)}
             result = collection.find_one(query)
             print("----------result--------")
 
